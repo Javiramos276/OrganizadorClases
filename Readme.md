@@ -13,5 +13,4 @@ El público objetivo pueden ser docentes, grupos de docentes o institutos de cla
 5. Dashboard para supervisión.
 
 ### Diagrama de clases y relaciones
-[Ver PDF del diagrama](E:\DescargasD\proyectos\PlanificadorDeClases\PlanificadorProyecto\Diagrama_clases.drawio.pdf)
-
+[Ver PDF del diagrama](Diagrama_clases.drawio.pdf)
