@@ -11,7 +11,7 @@ class Clase(models.Model):
     lista_alumnos = models.ManyToManyField(Alumno)
 
     def __str__(self):
-        return f"Clase de {self.docente_a_cargo} en {self.fecha_dictado} para {self.lista_alumnos}"
+        return f"Clase de {self.docente_a_cargo} en {self.fecha_dictado} para {self.lista_alumnos}" ## Creo que aca retorno un queryset ojo
     
     def modificar_horario_clase(self):
         """

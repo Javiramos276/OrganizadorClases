@@ -6,10 +6,10 @@ class MetodoPago(models.TextChoices):
     TRANSFERENCIA = 'TT', 'Transferencia'
 
 class Pago(models.Model):
-    monto = models.DecimalField(max_digits=20)
+    monto = models.DecimalField(max_digits=10, decimal_places=2)
     metodo_pago = models.CharField(
         max_length=2,
-        choices=MetodoPago.choices,  # Aquí usas las opciones definidas en el `MetodoPago`
+        choices=MetodoPago.choices, 
         default=MetodoPago.TRANSFERENCIA,
     )
 
@@ -32,3 +32,11 @@ class Pago(models.Model):
         """
         Dado un alumno y una clase, cancela el pago si se cancelo la clase.
         """
+        pass
+
+    def calcular_pago(self,tiempo):
+        """
+        tiempo = String, opciones posibles ("dia","semana","quincena","mes")
+        Calcula el pago dado un tiempo trabajado
+        """
+        pass

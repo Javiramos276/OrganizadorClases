@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
+from Clases.models import Materia
 
 # Create your models here.
 
@@ -10,14 +11,9 @@ class Usuario(AbstractBaseUser):
     telefono = models.CharField(max_length=20, unique=True, blank=True, null=True)
 
 class Docente(Usuario):
-    materias = [
-        ("AL", 'Algebra Lineal'),
-        ("AM1", 'Analisis matematico 1'),
-        ("AM2", 'Analisis matematico 2'),
-    ]
-    materias_dictadas = models.CharField(max_length=3, choices=materias)
+    materias_dictadas = models.ManyToManyField(Materia)
 
-    def agregar_clase(Alumno,Clase):
+    def agregar_clase(self,Alumno):
         """
         Alumno (Objeto)
         Clase (Objeto)
@@ -25,7 +21,7 @@ class Docente(Usuario):
         """
         pass
 
-    def eliminar_clase(Alumno,Clase):
+    def eliminar_clase(self,Alumno):
         """
         Alumno (Objeto)
         Clase (Objeto)
@@ -33,6 +29,11 @@ class Docente(Usuario):
         """
         pass
 
+    def mostrar_clases_del_dia(self):
+        """
+        Retorna todas las clases que tiene el profesor en el dia
+        """
+        pass
 
 class Alumno(Usuario):
 
