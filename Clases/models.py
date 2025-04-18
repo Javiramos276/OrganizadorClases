@@ -25,13 +25,13 @@ class Clase(models.Model):
         """
         pass
 
-    def quitar_alumno_clase(self,alumno):
+    def quitar_alumno_clase(self,estudiante):
         """
         Elimina a un alumno de la lista de alumnos de la clase
         """
         pass
 
-    def agregar_alumno_a_clase(self,alumno):
+    def agregar_alumno_a_clase(self,estudiante):
         """
         Agrega un alumno a una clase
         """
@@ -54,3 +54,9 @@ class Inscripcion(models.Model):
 
     def __str__(self):
         return f"{self.estudiante} inscrito en {self.clase}"
+
+    def crear_inscripcion(self, estudiante, clase):
+        """
+        Crea la inscripcion de un alumno a una clase
+        """
+        pass

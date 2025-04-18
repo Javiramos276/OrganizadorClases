@@ -34,9 +34,12 @@ class Pago(models.Model):
         """
         pass
 
-    def calcular_pago(self,tiempo):
+    def calcular_pago(self,docente,tiempo):
         """
-        tiempo = String, opciones posibles ("dia","semana","quincena","mes")
-        Calcula el pago dado un tiempo trabajado
+        Dado un docente, calcula el pago por el tiempo trabajado.
+
+        Args:
+        docente (Docente): Instancia del docente para el cual se calcula el pago.
+        tiempo (str): Intervalo de tiempo. Opciones válidas: "dia", "semana", "quincena", "mes".
         """
         pass
